@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+		.navbar {
+    background-color: #4CAF50;
+    overflow: hidden;
+    padding: 8px 16px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+		<div class="navbar">
+			<a href="/">Home</a>
+			<a href="viewbooks">View Books</a>
+			<a href="addbook">Add Books</a>
+		</div>
+        <h1>Add a Book</h1>
+        <form action="#" th:action="@{/addbook}" th:object="${book}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" th:field="*{name}" id="name" />
+
+            <label for="description">Description:</label>
+            <input type="text" th:field="*{description}" id="description" />
+
+            <label for="author">Author:</label>
+            <input type="text" th:field="*{author}" id="author" />
+
+            <label for="yearOfRelease">Year of Release:</label>
+            <input type="number" th:field="*{yearOfRelease}" id="yearOfRelease" />
+
+            <label for="rating">Rating:</label>
+            <input type="number" th:field="*{rating}" id="rating" />
+
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </form>
+    </div>
+</body>
+</html>
