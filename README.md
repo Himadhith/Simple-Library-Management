@@ -33,3 +33,4 @@ All the source codes are under the src folder
 * `localhost:8080/` shows the Homepage
 * `localhost:8080/viewbooks` shows the table containing all the data
 * `localhost:8080/addbook` shows a form asking for the required details 
+* Navigation bar has been implemented for the user to go to different pages with ease 
