@@ -1,4 +1,4 @@
-# Spring-MVC-project
+# Simple-Library-Management
 OOAD project showcasing MVC architecture using Spring Boot and MongoDB
 
 # Dependencies
@@ -29,7 +29,10 @@ All the source codes are under the src folder
 # Running the Project
 * Since the project runs using maven, open a terminal at the project's location and enter the following command:
 
-      mvnw spring-boot:run
+      mvn spring-boot:run
+* It is advisible to run :
+      
+      mvn spring-boot:run
 * `localhost:8080/` shows the Homepage
 * `localhost:8080/viewbooks` shows the table containing all the data
 * `localhost:8080/addbook` shows a form asking for the required details 
