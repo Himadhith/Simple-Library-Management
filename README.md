@@ -30,9 +30,9 @@ All the source codes are under the src folder
 * Since the project runs using maven, open a terminal at the project's location and enter the following command:
 
       mvn spring-boot:run
-* It is advisible to run :
+* It is advisible to run the command below if any error is thrown:
       
-      mvn spring-boot:run
+      mvn clean install
 * `localhost:8080/` shows the Homepage
 * `localhost:8080/viewbooks` shows the table containing all the data
 * `localhost:8080/addbook` shows a form asking for the required details 
